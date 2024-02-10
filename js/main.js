@@ -169,8 +169,9 @@ function init() {
   directionalLight.shadow.mapSize.height = 1024;
 
   // Camera position
-  camera.position.set(0, 1, 0);
-  camera.lookAt(0, 1, 0);
+  camera.position.set(2.60, 1, 3.25);
+  camera.lookAt(-2, -1, -1);
+  camera.position.z = 0;
 
   // Furniture position
   bed.position.set(-3, -0.65, -2.95); 
@@ -189,7 +190,7 @@ function init() {
   monitorScreen.position.set(0, 0, 0.055); 
   mouseMesh.position.set(2.10, -0.10, -3.65);
   trashcan.position.set(3.10, -0.75, -3.85);
-  lamp.position.set(-1, -0.30, -3.90);
+  lamp.position.set(-1.05, -0.30, -4.10);
   sidetable.position.set(-1.05, -0.70, -4.10);
 
   // Enable shadows for furniture
