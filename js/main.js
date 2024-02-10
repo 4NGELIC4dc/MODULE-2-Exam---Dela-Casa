@@ -154,13 +154,13 @@ function init() {
   const sidetable = new THREE.Mesh(sidetableGeometry, sidetableMaterial);
   scene.add(sidetable);
 
-  // Add ambient light
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+  // Ambient light
+  const ambientLight = new THREE.AmbientLight(0xb53389, 0.2);
   scene.add(ambientLight);
 
-  // Add light to shadows
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-  directionalLight.position.set(10, 5, 5);
+  // Directional light
+  const directionalLight = new THREE.DirectionalLight(0xffffcc, 1);
+  directionalLight.position.set(5, 10, 2.5);
   scene.add(directionalLight);
 
   // Shadow properties
