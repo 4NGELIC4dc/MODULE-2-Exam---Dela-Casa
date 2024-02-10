@@ -334,14 +334,32 @@ function init() {
   );
 
     // Create wall poster
-    const wallPosterGeometry = new THREE.PlaneGeometry(1.5, 1.5);
-    const wallPostertextureLoader = new THREE.TextureLoader();
-    wallPostertextureLoader.load('images/wall_poster.jpg',
+    const wallPoster1Geometry = new THREE.PlaneGeometry(1.5, 1.5);
+    const wallPoster1textureLoader = new THREE.TextureLoader();
+    wallPoster1textureLoader.load('images/genshin_poster.jpg',
       function (texture) {
-        const wallPosterMaterial = new THREE.MeshPhongMaterial({ map: texture, side: THREE.DoubleSide });
-        const wallPoster = new THREE.Mesh(wallPosterGeometry, wallPosterMaterial);
-        wallPoster.position.set(-1.05, 0.15, 0.11);
-        wall1.add(wallPoster);
+        const wallPoster1Material = new THREE.MeshPhongMaterial({ map: texture, side: THREE.DoubleSide });
+        const wallPoster1 = new THREE.Mesh(wallPoster1Geometry, wallPoster1Material);
+        wallPoster1.position.set(-1.05, 0.25, 0.11);
+        wall1.add(wallPoster1);
+        renderer.render(scene, camera);
+      },
+      function (xhr) {
+        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+      },
+      function (error) {
+        console.error('Error loading texture:', error);
+      }
+    );
+
+    const wallPoster2Geometry = new THREE.PlaneGeometry(1.5, 1.5);
+    const wallPoster2textureLoader = new THREE.TextureLoader();
+    wallPoster2textureLoader.load('images/starrail_poster.jpg',
+      function (texture) {
+        const wallPoster2Material = new THREE.MeshPhongMaterial({ map: texture, side: THREE.DoubleSide });
+        const wallPoster2 = new THREE.Mesh(wallPoster2Geometry, wallPoster2Material);
+        wallPoster2.position.set(2.45, 0.25, 0.11);
+        wall1.add(wallPoster2);
         renderer.render(scene, camera);
       },
       function (xhr) {
